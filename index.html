@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestifyAPI</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>&lt;TestifyAPI&gt;</h1>
+                    <p>A lightweight API testing tool for developers 🚀</p>
+                </div>
+                <button class="theme-toggle" id="themeToggle">Toggle Theme</button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="main-section">
+            <div class="panel">
+                <h2 class="panel-title">🔹 Request Setup</h2>
+                <select class="method-select" id="methodSelect">
+                    <option value="GET">GET</option>
+                    <option value="POST">POST</option>
+                    <option value="PUT">PUT</option>
+                    <option value="DELETE">DELETE</option>
+                </select>
+                <input type="text" class="url-input" id="urlInput" placeholder="https://jsonplaceholder.typicode.com/posts">
+                <textarea class="json-body" id="jsonBody" placeholder="{&#10;  \"title\": \"foo\",&#10;  \"body\": \"bar\",&#10;  \"userId\": 1&#10;}"></textarea>
+                <button class="send-btn" id="sendRequest">&gt; Send Request</button>
+            </div>
+
+            <div class="panel">
+                <h2 class="panel-title">Response:</h2>
+                <div class="response-status" id="responseStatus">
+                    <span>Status:</span>
+                    <span class="status-code" id="statusCode">Waiting for request...</span>
+                </div>
+                <div class="response-box">
+                    <div class="line-numbers" id="lineNumbers"></div>
+                    <div class="response-content" id="responseContent">// Response will appear here</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="docs-section">
+            <h2>How to Use</h2>
+            <ol class="steps">
+                <li data-step="1.">Select method (GET / POST / PUT / DELETE)</li>
+                <li data-step="2.">Enter API URL (e.g., https://jsonplaceholder.typicode.com/posts)</li>
+                <li data-step="3.">(Optional) Add JSON body for POST/PUT</li>
+                <li data-step="4.">Click 'Send Request' → See formatted response!</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>© 2025 TestifyAPI | Built with ♥ by adina hawaldar</p>
+                <div class="footer-links">
+                    <a href="#">GitHub Repo</a>
+                    <a href="#">Docs</a>
+                    <a href="#">About</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+   <script src="app.js"></script>
+</body>
+</html>
